@@ -1,18 +1,11 @@
 #Program to print the Fibonacci series
 n= int(input("Enter the number of terms: "))
-n1=0
-n2=1
-count=0
-if n<=0:
-   print("Invalid Input!!")
-elif n==1:
-   print("The Fibonacci sequence is:")
-   print(n1)
-else:
-   print("The Fibonacci sequence is:")
-   while count<n:
-       print(n1)
-       n3=n1+n2
-       n1=n2
-       n2=n3
-       count+=1
+n1,n2=0,1
+print("The Fibonacci sequence is:")
+print("The 1 term of the sequence is: ",n1)
+print("The 2 term of the sequence is: ",n2)
+for i in range(2,n):
+   n3=n1+n2
+   print("The",i+1,"term of the sequence is: ",n3)
+   n1=n2
+   n2=n3
